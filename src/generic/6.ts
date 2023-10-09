@@ -14,7 +14,7 @@ type User = {
   password: string;
 };
 
-type NewUserInfo = Pick<User, "email" | "password">;
+type NewUserInfo = Partial<User>;
 
 function createOrUpdateUser(initialValues: NewUserInfo): NewUserInfo {
   return initialValues;
